@@ -6,12 +6,12 @@ const services = [
   {
     title: "Primary Care and Internal MD",
     description: "Our doctors partner with you to help you reach your wellness goals.",
-    icon: "care",
+    icon: "primary-care",
   },
   {
     title: "Emergency Care",
     description: "We provide emergency care for adults and children.",
-    icon: "emergency",
+    icon: "emergency-care",
   },
   {
     title: "Imaging Services",
@@ -21,7 +21,7 @@ const services = [
   {
     title: "Urgent Care",
     description: "Convenient care for non-life-threatening health concerns.",
-    icon: "urgent",
+    icon: "urgent-care",
   },
 ];
 
@@ -50,7 +50,7 @@ const navigation = [
 function BrandMark() {
   return (
     <div className="fd-brand" aria-label="MyPatientHUB">
-      <span className="fd-brand-mark"><b>M</b><small>PHUB</small></span>
+      <img className="fd-brand-logo" src="/images/find-doctor/my-pihub-logo.jpg" alt="MyPiHUB logo" />
       <span>MyPatientHUB</span>
     </div>
   );
@@ -66,13 +66,13 @@ function SearchIcon() {
 }
 
 function ServiceIcon({ type }) {
-  const icons = {
-    care: <><path d="M12 21s-8-4.8-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.2-8 11-8 11Z" /><path d="M8 12h2l1.2-2.4 2.1 4.8 1.1-2.4H17" /></>,
-    emergency: <><path d="M12 3v18M3 12h18" /><path d="M7 7 5.5 5.5M17 7l1.5-1.5M7 17l-1.5 1.5M17 17l1.5 1.5" /></>,
-    imaging: <><path d="M4 5h16v14H4z" /><circle cx="12" cy="12" r="4" /><path d="M7 8h.01M17 16h.01" /></>,
-    urgent: <><path d="M12 3a9 9 0 1 0 9 9" /><path d="M12 7v5l3 2" /><path d="M17 3h4v4" /></>,
+  const images = {
+    "primary-care": "primary-care.jpg",
+    "emergency-care": "emergency-care.jpg",
+    imaging: "imaging.jpg",
+    "urgent-care": "urgent-care.jpg",
   };
-  return <svg className={`fd-service-icon fd-service-icon-${type}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{icons[type]}</svg>;
+  return <img className="fd-service-icon" src={`/images/find-doctor/${images[type]}`} alt="" aria-hidden="true" />;
 }
 
 function FindDoctor() {

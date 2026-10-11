@@ -25,9 +25,7 @@
 }
 
 .fd-brand { display: flex; align-items: center; gap: 10px; min-height: 54px; margin-bottom: 36px; color: #344054; font-size: 15px; font-weight: 650; white-space: nowrap; }
-.fd-brand-mark { width: 36px; height: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-left: 3px solid #244e92; color: #244e92; line-height: 1; transform: skew(-5deg); }
-.fd-brand-mark b { font-family: Georgia, serif; font-size: 25px; letter-spacing: -3px; }
-.fd-brand-mark small { color: #cd1684; font-size: 8px; font-weight: 800; letter-spacing: .2px; }
+.fd-brand-logo { width: 43px; height: 46px; flex: 0 0 43px; object-fit: contain; }
 
 .fd-navigation { display: grid; gap: 8px; }
 .fd-nav-item { min-height: 52px; display: flex; align-items: center; gap: 15px; padding: 7px 14px; border-radius: 12px; color: #687486; text-decoration: none; font-size: 15px; font-weight: 500; transition: background-color .18s ease, color .18s ease, box-shadow .18s ease; }
@@ -84,11 +82,7 @@
 .fd-service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 25px; margin-top: 22px; }
 .fd-service-card { width: 100%; min-height: 128px; display: flex; align-items: center; gap: 15px; padding: 17px 21px; border: 1px solid #eef0f3; border-radius: 8px; background: #fff; color: #344054; text-align: left; box-shadow: 0 2px 3px rgba(17, 24, 39, .17); transition: box-shadow .2s ease, transform .2s ease; }
 .fd-service-card:hover, .fd-service-card.is-open { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(17, 24, 39, .12); }
-.fd-service-icon { width: 56px; height: 56px; flex: 0 0 56px; padding: 7px; filter: drop-shadow(0 3px 2px rgba(0,0,0,.12)); }
-.fd-service-icon-care { color: #ee6a40; fill: rgba(245, 99, 56, .14); }
-.fd-service-icon-emergency { color: #0d5260; fill: rgba(24, 188, 192, .11); }
-.fd-service-icon-imaging { color: #f04c2d; }
-.fd-service-icon-urgent { padding: 10px; border-radius: 13px; color: #fff; background: #e44b37; }
+.fd-service-icon { width: 62px; height: 62px; flex: 0 0 62px; object-fit: contain; border-radius: 50%; filter: drop-shadow(0 3px 2px rgba(0,0,0,.12)); }
 .fd-card-copy { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
 .fd-card-title { color: #252b34; font-size: 20px; line-height: 1.26; font-weight: 520; }
 .fd-card-description { color: #465366; font-size: 15px; line-height: 1.55; font-weight: 600; }

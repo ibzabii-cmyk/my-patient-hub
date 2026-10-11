@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import "./FindDoctor.css";
 
 const services = [
@@ -127,10 +126,10 @@ function FindDoctor() {
         <BrandMark />
         <nav className="fd-navigation" aria-label="Main navigation">
           {navigation.map((item) => (
-            <Link className={`fd-nav-item${item.active ? " is-active" : ""}`} to={item.to} key={item.label} aria-current={item.active ? "page" : undefined}>
+            <div className={`fd-nav-item${item.active ? " is-active" : ""}`} key={item.label} aria-current={item.active ? "page" : undefined}>
               <span className="fd-nav-icon" aria-hidden="true">{item.icon}</span>
               <span>{item.label}</span>
-            </Link>
+            </div>
           ))}
         </nav>
         <section className="fd-app-card" aria-label="Download the MyPiHUB mobile app">
@@ -145,26 +144,24 @@ function FindDoctor() {
       </aside>
 
       <main className="fd-main">
-        <header className="fd-topbar">
-          <div className="fd-page-label">
-            <div className="fd-breadcrumb"><span aria-hidden="true">⌂</span><span>/</span><span>Searchdoctor</span></div>
-            <strong>Searchdoctor</strong>
-          </div>
-          <button className="fd-menu-button" type="button" aria-label="Open navigation">☰</button>
-          <div className="fd-topbar-actions">
-            <label className="fd-global-search">
-              <SearchIcon />
-              <input type="search" placeholder="Type here…" aria-label="Search the site" />
-            </label>
-            <button className="fd-logout" type="button"><span aria-hidden="true">●</span> Log out</button>
-            <button className="fd-top-icon" type="button" aria-label="Settings">⚙</button>
-            <button className="fd-top-icon" type="button" aria-label="Notifications">♟</button>
-          </div>
-        </header>
-
         <div className="fd-content">
           <section className="fd-hero" aria-labelledby="fd-title">
-            <div className="fd-hero-breadcrumb"><span aria-hidden="true">⌂</span><span>/</span><span>Searchdoctor</span></div>
+            <header className="fd-topbar">
+              <div className="fd-page-label">
+                <div className="fd-breadcrumb"><span aria-hidden="true">⌂</span><span>/</span><span>Searchdoctor</span></div>
+                <strong>Searchdoctor</strong>
+              </div>
+              <button className="fd-menu-button" type="button" aria-label="Open navigation">☰</button>
+              <div className="fd-topbar-actions">
+                <label className="fd-global-search">
+                  <SearchIcon />
+                  <input type="search" placeholder="Type here…" aria-label="Search the site" />
+                </label>
+                <button className="fd-logout" type="button"><span aria-hidden="true">●</span> Log out</button>
+                <button className="fd-top-icon" type="button" aria-label="Settings">⚙</button>
+                <button className="fd-top-icon" type="button" aria-label="Notifications">♟</button>
+              </div>
+            </header>
             <div className="fd-hero-content">
               <h1 id="fd-title">Find a Doctor</h1>
               <p>Search Doctors and schedule an appointment</p>

@@ -1,4 +1,8 @@
+
 import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
+
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Appointments from "./pages/Appointments";
@@ -11,24 +15,48 @@ import MyDependents from "./pages/MyDependents";
 import MyAccount from "./pages/MyAccount";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      {/* Home page */}
+      <Route path="/" element={<Home />} />
+
+      {/* Pages with shared sidebar */}
+      <Route element={<MainLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
+
         <Route path="/appointments" element={<Appointments />} />
+
         <Route path="/findDoctor" element={<FindDoctor />} />
+
         <Route path="/findClinic" element={<FindClinic />} />
+
         <Route path="/chat" element={<Chat />} />
-        <Route path="findMarketPlace" element={<FindMarketPlace />} />
-        <Route path="findPharmacy" element={<FindPharmacy />} />
-        <Route path="myDependents" element={<MyDependents />} />
-        <Route path="myAccount" element={<MyAccount />} />
-        <Route path="settings" element={<Settings />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </>
+
+        <Route
+          path="/findMarketPlace"
+          element={<FindMarketPlace />}
+        />
+
+        <Route
+          path="/findPharmacy"
+          element={<FindPharmacy />}
+        />
+
+        <Route
+          path="/myDependents"
+          element={<MyDependents />}
+        />
+
+        <Route path="/myAccount" element={<MyAccount />} />
+
+        <Route path="/settings" element={<Settings />} />
+      </Route>
+
+      {/* Not found page */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

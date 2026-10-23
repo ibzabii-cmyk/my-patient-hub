@@ -133,7 +133,6 @@ const { openSidebar } = useOutletContext();
         {/* Header and hero */}
         <div className="overflow-hidden rounded-3xl shadow-sm">
          <ClinicHeader onMenuClick={openSidebar} />
-
           <ClinicSearch onSearch={handleSearch} />
         </div>
 

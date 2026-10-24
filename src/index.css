@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -237,8 +236,3 @@ code {
     @apply bg-background text-foreground;}
   html {
     @apply font-sans;}}
-=======
-
-@import "tailwindcss";
-@import "leaflet/dist/leaflet.css";
->>>>>>> df21aacade2d054173afdd71939e59740ac390cd

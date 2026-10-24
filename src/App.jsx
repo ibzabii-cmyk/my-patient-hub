@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css'
 import AppRouter from './routes/AppRouter'
 
@@ -11,3 +12,68 @@ function App() {
 }
 
 export default App
+=======
+
+import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
+
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Appointments from "./pages/Appointments";
+import FindDoctor from "./pages/FindDoctor";
+import FindClinic from "./pages/FindClinic";
+import Chat from "./pages/Chat";
+import FindMarketPlace from "./pages/FindMarketPlace";
+import FindPharmacy from "./pages/FindPharmacy";
+import MyDependents from "./pages/MyDependents";
+import MyAccount from "./pages/MyAccount";
+import Settings from "./pages/Settings";
+import NotFound from "./pages/NotFound";
+
+function App() {
+  return (
+    <Routes>
+      {/* Home page */}
+      <Route path="/" element={<Home />} />
+
+      {/* Pages with shared sidebar */}
+      <Route element={<MainLayout />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/appointments" element={<Appointments />} />
+
+        <Route path="/findDoctor" element={<FindDoctor />} />
+
+        <Route path="/findClinic" element={<FindClinic />} />
+
+        <Route path="/chat" element={<Chat />} />
+
+        <Route
+          path="/findMarketPlace"
+          element={<FindMarketPlace />}
+        />
+
+        <Route
+          path="/findPharmacy"
+          element={<FindPharmacy />}
+        />
+
+        <Route
+          path="/myDependents"
+          element={<MyDependents />}
+        />
+
+        <Route path="/myAccount" element={<MyAccount />} />
+
+        <Route path="/settings" element={<Settings />} />
+      </Route>
+
+      {/* Not found page */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+export default App;
+>>>>>>> df21aacade2d054173afdd71939e59740ac390cd

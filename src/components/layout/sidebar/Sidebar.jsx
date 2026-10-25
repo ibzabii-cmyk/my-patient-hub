@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { mainMenu } from "../../../Config/Config";
+import { mainMenu } from "../../../config/Config";
 import MenuItem from "./MenuItem";
 
 function Sidebar({ collapsed, isMobile, setIsMobile }) {

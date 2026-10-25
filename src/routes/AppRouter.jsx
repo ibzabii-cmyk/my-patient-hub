@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "../components/layout/Layout";
 
-import Dashboard from "../pages/dashboard/Dashboard";
+import Dashboard from "../pages/Dashboard";
 import Appointment from "../pages/appointment/Appointment";
 import Clinic from "../pages/clinic";
 import Chat from "../pages/chat/Chat";

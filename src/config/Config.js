@@ -1,3 +1,4 @@
+
 import {
   CalendarDays,
   ClipboardPlus,
@@ -20,22 +21,22 @@ export const mainMenu = [
   {
     title: "Appointment",
     icon: CalendarDays,
-    path: "/appointments",
+    path: "/appointment",
   },
   {
     title: "Find Doctor",
     icon: ClipboardPlus,
-    path: "/findDoctor",
+    path: "/searchdoctor",
   },
   {
     title: "Find Clinic",
     icon: Hospital,
-    path: "/findClinic",
+    path: "/findhospital",
   },
   {
     title: "Find Marketplace",
     icon: Store,
-    path: "/findMarketPlace",
+    path: "/marketplace",
   },
   {
     title: "Chat",
@@ -45,17 +46,17 @@ export const mainMenu = [
   {
     title: "Find Pharmacy",
     icon: Pill,
-    path: "/findPharmacy",
+    path: "/findpharmacy",
   },
   {
     title: "My Dependents",
     icon: Users,
-    path: "/myDependents",
+    path: "/dependents",
   },
   {
     title: "My Account",
     icon: UserRound,
-    path: "/myAccount",
+    path: "/account",
   },
   {
     title: "Settings",

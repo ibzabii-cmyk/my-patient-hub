@@ -1,9 +1,5 @@
-
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
-import Layout from "../components/layout/Layout";
-
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/dashboard/Dashboard";
 import Appointment from "../pages/appointment/Appointment";
 import Clinic from "../pages/clinic";
 import Chat from "../pages/chat/Chat";
@@ -15,61 +11,12 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
-
-        <Route
-          path="/dashboard"
-          element={
-            <Layout>
-              <Dashboard />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/appointment"
-          element={
-            <Layout>
-              <Appointment />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/findhospital"
-          element={
-            <Layout>
-              <Clinic />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/chat"
-          element={
-            <Layout>
-              <Chat />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/searchdoctor"
-          element={
-            <Layout>
-              <Patients />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/settings"
-          element={
-            <Layout>
-              <Settings />
-            </Layout>
-          }
-        />
-
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/findhospital" element={<Clinic />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/searchdoctor" element={<Patients />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </BrowserRouter>

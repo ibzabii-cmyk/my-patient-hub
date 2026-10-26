@@ -1,3 +1,4 @@
+
 import {
   CalendarDays,
   ClipboardPlus,
@@ -36,13 +37,11 @@ export const mainMenu = [
     title: "Find Marketplace",
     icon: Store,
     path: "/marketplace",
-
   },
   {
     title: "Chat",
     icon: MessageSquare,
     path: "/chat",
-    
   },
   {
     title: "Find Pharmacy",
